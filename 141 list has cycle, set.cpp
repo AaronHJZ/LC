@@ -5,11 +5,9 @@ public:
 		set<ListNode*> s;
 		while (head != nullptr)
 		{
-			if (s.count(head) == 0)
-				s.insert(head);
-			else
+			if (s.count(head) != 0)
 				return true;
-
+			s.insert(head);
 			head = head->next;
 		}
 
