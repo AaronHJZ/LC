@@ -7,6 +7,7 @@ public:
 		{
 			if (s.count(head) != 0)
 				return true;
+			
 			s.insert(head);
 			head = head->next;
 		}
