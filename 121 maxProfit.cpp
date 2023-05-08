@@ -5,12 +5,12 @@ public:
 		int minprice = INT_MAX;
 		int maxprofit = 0;
 
-		for (int i = 0; i < prices.size(); ++i)
+		for (int i : prices)
 		{
-			if (minprice > prices[i])
-				minprice = prices[i];
-			else if (prices[i] - minprice > maxprofit)
-				maxprofit = prices[i] - minprice;
+			if (minprice > i)
+				minprice = i;
+			else if (maxprofit < i - minprice)
+				maxprofit = i - minprice;
 		}
 
 		return maxprofit;
